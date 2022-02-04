@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/raleway/raleway-800.woff2) format(woff2);
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/rubik/rubik-400.woff2) format(woff2);
+    font-weight: 400;
+   font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/rubik/rubik-700.woff2) format(woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/rubik/rubik-800.woff2) format(woff2);
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Raleway";
+    background-color: #FFFFFF;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-decoration: none;
+      
+}
+
+header {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+ul.navigation-list a:hover {
+    color: #444444;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+ul.navigation {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+p.slider-text {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+p.slider-text__description {
+    color: #444444;
+}
+
+a.slider-link {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+span.slider-feature-value {
+    font-size: 36px;
+    line-height: 30px;
+}
+
+span.slider-feature-title {
+    font-size: 16px;
+    line-height: 30px;
+    color: #444444;
+}
+
+ul.catalog-list {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+p.service-title {
+    font-size: 50px;
+    line-height: 50px;
+    
+}
+
+p.service-description {
+    color: #444444;
+}
+
+a.rare-item__link {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
+p.info-title {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+p.info-description {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+p.its-free {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+ul.delivery-services {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+section.info {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+p.info-title {
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+
+}
+footer {
+    background-color: #444444;    
+    color: #FFFFFF;
+}
+
+a.contacts-phone {
+ color:black;
+ 
+}
+
+a.footer-phone {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a.footer-phone:hover {
+    color: #FFC700;
+    background-color: transparent;     
+}
+
+ul.footer-menu a:link {
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+ul.footer-menu a:hover { 
+ color: #FFC700;
+ background-color: transparent;
+ text-decoration: underline;   
+    
+}
+
+p.subscription-title {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+section.subscription {
+    background: #F0F0F0;
+}
