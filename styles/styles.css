@@ -206,3 +206,119 @@ p.subscription-title {
 section.subscription {
     background: #F0F0F0;
 }
+
+.main-inner {
+    background: #F0F0F0;
+}
+
+header.inner-header {
+    background: #FFFFFF;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.breadcrumbs {
+    font-size: 16px;
+    line-height: 19px;
+    background: #ffffff;
+}
+
+.breadcrumbs a:hover {
+    color: #444444;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+h3.item-card-title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+b.item-card-price {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #444444;
+}
+
+form.catalog-filter { 
+    color:#000000;
+}
+
+legend.catalog-filter-title {    
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+
+}
+
+label:hover {
+    color: #444444;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+label {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;    
+}
+
+div.catalog-container {
+    background: white;
+}
+
+ol.pagination {
+    background: #EBEBEB;
+}
+
+a.pagination-link  {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #444444;
+    opacity: 0.3;
+}
+
+ol.pagination :first-child :last-child {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+fieldset {
+    border:0 none;
+}
+
+
+li {
+    list-style: none; 
+}
+
+li.delivery-name::before {      
+    content: "\2022"; 
+    color: #FFC700;     
+    display: inline-block; 
+    position: static;
+    width: 8px;
+    height: 8px;
+    left: 0px;
+    top: 6px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+   
