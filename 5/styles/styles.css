@@ -1,0 +1,484 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+    font-weight: 400;
+   font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --black: #000000;
+    --dark: #444444;
+    --gray: #dcdcdc;
+    --light-gray: #ebebeb;
+    --light: #f0f0f0;
+    --white: #ffffff;
+    --yellow-light: #ffe17f;
+    --yellow-dark: #ffc700;
+    --purple: #af4fff;
+    --red: #ff3d3d;
+    --orange: #fd912e;
+    --green: #08af00;
+ }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "Raleway", "Arial", sans-serif;
+    background-color: var(--white);
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--black);
+    text-decoration: none;
+      
+}
+
+
+.page-header {
+    text-decoration: none;
+    color: black;   
+    position: relative;
+    background: var(--yellow-light);
+    width: 1160px; 
+    margin: 0 auto;
+    padding-top: 84px;
+}
+
+.page-header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40px;
+    background: white;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.main-logo {
+    position: absolute; 
+    top: 17px;
+    left: 61px;
+    z-index: 10;    
+}
+
+.search-form {
+    font-family: "Rubik";
+    font-weight: 400;
+    display: flex;     
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.search-input-container::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../images/search-icon.svg") no-repeat top left;
+}
+
+.search-input {
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50px 0px 0px 50px;
+    width: 359px;
+    height: 40px;
+    background: none;
+    display: block;
+    padding-left: 50px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+ul.navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.search-button {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 400;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-left: none;
+    width: 160px;
+    border-radius: 0px 50px 50px 0px;
+    height: 40px;
+    background: none;
+    display: block;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.navigation  {
+    position: relative;
+    z-index: 10;              
+}
+
+.user-navigation-container {
+    display: flex;
+    margin: 0 auto;
+    width: 1040px;    
+    justify-content: space-between;   
+}
+
+.navigation-user {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 496px;
+    flex-wrap: wrap;
+    margin-left: -20px;
+}
+
+.navigation-item {
+    margin-left: 20px;
+}
+
+.navigation-item:first-child {
+    width: 50%;
+    
+}
+
+.navigation-list .navigation-service {
+    font-family: "Raleway";
+    font-weight: 800;
+}
+
+
+
+
+
+
+.main-container {
+    flex-grow: 1;
+}
+
+.page-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+p.slider-text {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+p.slider-text__description {
+    color: #444444;
+}
+
+a.slider-link {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+span.slider-feature-value {
+    font-size: 36px;
+    line-height: 30px;
+}
+
+span.slider-feature-title {
+    font-size: 16px;
+    line-height: 30px;
+    color: #444444;
+}
+
+ul.catalog-list {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+p.service-title {
+    font-size: 50px;
+    line-height: 50px;
+    
+}
+
+p.service-description {
+    color: #444444;
+}
+
+a.rare-item__link {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+p.info-title {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+p.info-description {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+p.its-free {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+ul.delivery-services {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+section.info {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+p.info-title {
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+
+}
+footer {
+    background-color: #444444;    
+    color: #FFFFFF;
+}
+
+a.contacts-phone {
+ color:black;
+ 
+}
+
+a.footer-phone {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a.footer-phone:hover {
+    color: #FFC700;
+    background-color: transparent;     
+}
+
+ul.footer-menu a:link {
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+ul.footer-menu a:hover { 
+ color: #FFC700;
+ background-color: transparent;
+ text-decoration: underline;   
+    
+}
+
+p.subscription-title {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+section.subscription {
+    background: #F0F0F0;
+}
+
+.main-inner {
+    background: #F0F0F0;
+}
+
+header.inner-header {
+    background: #FFFFFF;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.breadcrumbs {
+    font-size: 16px;
+    line-height: 19px;
+    background: #ffffff;
+}
+
+.breadcrumbs a:hover {
+    color: #444444;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+h3.item-card-title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+b.item-card-price {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #444444;
+}
+
+form.catalog-filter { 
+    color:#000000;
+}
+
+legend.catalog-filter-title {    
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+
+}
+
+label:hover {
+    color: #444444;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+label {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;    
+}
+
+div.catalog-container {
+    background: white;
+}
+
+ol.pagination {
+    background: #EBEBEB;
+}
+
+a.pagination-link  {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #444444;
+    opacity: 0.3;
+}
+
+ol.pagination :first-child :last-child {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+fieldset {
+    border:0 none;
+}
+
+
+li {
+    list-style: none; 
+}
+
+li.delivery-name::before {      
+    content: "\2022"; 
+    color: #FFC700;     
+    display: inline-block; 
+    position: static;
+    width: 8px;
+    height: 8px;
+    left: 0px;
+    top: 6px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 26px;
+}
+   
+
+
+
+
+
