@@ -1358,11 +1358,11 @@ fieldset {
 /* Modal */
 
 .modal-container {
-    display: none; 
+   /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
-    /*display: flex;*/
+    display: flex;
     width: 100%;
     height: 100%;
     background-color: rgba(240, 240, 240, 0.9);;
@@ -1378,7 +1378,7 @@ fieldset {
     border: 10px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
-    z-index: 15;
+    z-index: 1;
 }
 
 .modal-title {
@@ -1424,7 +1424,32 @@ fieldset {
     box-sizing: border-box;
     background: var(--light);
     border: none;
+    margin-bottom: 20px;
+    outline: none;
 }
+
+.counter-field {
+    width: 60px;
+    padding: 0;
+    height: 60px;
+    text-align: center;
+    margin: 0;
+    font-family:"Rubik", sans-serif;
+    font-style: normal;    
+    font-size: 16px;
+    line-height: 20px;
+    box-sizing: border-box;
+    background: var(--light);
+    border: none;
+}
+
+/* .email-field:valid {
+    outline: none;
+}
+
+.email-field:required:invalid {
+    outline:  2px solid var(--red);
+} */
 
 .delivery-form {
     display: grid;
@@ -1481,11 +1506,89 @@ fieldset {
 
 .counter-container {
     display: inline-grid;
-    grid-template-columns: 60px 60px 60px;    
+    grid-template-columns: 60px 60px 60px;
+    grid-area: d;
+    position: relative;
+    top: 33px;
+    z-index: 1;
 }
 
 .modal-delivery {
+  /*  display: none */
+}
+
+.button-send {
+    position: absolute;
+    bottom: 68px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: var(--black);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Tooltip */
+
+.form-label {
+    margin-top: -10px;
+}
+
+.tooltip-text::before {
+    position: absolute;
+    content: "";
+    background: black;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    right: 38px;
+    top: -2px;    
+}
+
+.tooltip-toggle {
+    background: url(../images/info-modal.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--yellow-light);
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 8px;
+    left: 8px;
+}
+
+.tooltip-text {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: none;   
     display: none;
+    width: 200px;
+    height: 160px;
+    text-align: left;  
+    padding: 19px;
+    box-sizing: border-box;
+    z-index: 10;
+    position: relative;
+    top: 8px;
+    right: 17px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+    display: block;
 }
 
 /* Popover */
@@ -1657,3 +1760,4 @@ fieldset {
 .open-cart-button-conainer {
     padding: 20px;
 }
+

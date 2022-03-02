@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -65,25 +67,25 @@
                 <ul class="cart-items-list">
                   <li class="cart-item">
                     <a href="" class="cart-item-link">
-                    <div class="cart-item-img-container">
-                      <img src="../1966201-device-33/images/cart-img-1.jpg" alt=" " class="cart-item-img">
-                    </div>
-                    <p class="cart-item-title">Любительская селфи-палка</p>
-                  </a>
-                    <button type="button" class="cart-item-button">                     
+                      <div class="cart-item-img-container">
+                        <img src="../1966201-device-33/images/cart-img-1.jpg" alt=" " class="cart-item-img">
+                      </div>
+                      <p class="cart-item-title">Любительская селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-button">
                       <span class="visually-hidden">Удалить из корзины</span>
-                    </button>                  
+                    </button>
                   </li>
                   <li class="cart-item">
                     <a href="" class="cart-item-link">
-                    <div class="cart-item-img-container">
-                      <img src="../1966201-device-33/images/cart-img-2.jpg" alt=" " class="cart-item-img">
-                    </div>
-                    <p class="cart-item-title">Профессиональная селфи-палка</p>
-                  </a>
-                    <button type="button" class="cart-item-button">                     
+                      <div class="cart-item-img-container">
+                        <img src="../1966201-device-33/images/cart-img-2.jpg" alt=" " class="cart-item-img">
+                      </div>
+                      <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-button">
                       <span class="visually-hidden">Удалить из корзины</span>
-                    </button>                  
+                    </button>
                   </li>
                 </ul>
                 <div class="total">
@@ -449,32 +451,40 @@
           <p class="field-group name">
             <label class="field-name" for="delivery-name">Ваше имя:</label>
             <input class="delivery-form-field field" type="text" id="delivery-name" name="delivery-name"
-              placeholder="Введите имя">
+              placeholder="Введите имя" required>
           </p>
           <p class="field-group email">
             <label class="field-name" for="delivery-email">Ваш e-mail:</label>
-            <input class="delivery-form-field field" type="email" id="delivery-email" name="delivery-email"
-              placeholder="Введите e-mail">
+            <input class="delivery-form-field email-field field" type="email" id="delivery-email" name="delivery-email"
+              placeholder="Введите e-mail" required>
           </p>
           <p class="field-group subject">
             <label class="field-name" for="delivery-subject">Что нужно привезти:</label>
             <input class="delivery-form-field field" type="text" id="delivery-subject" name="delivery-subject"
-              placeholder="В свободной форме">
+              placeholder="В свободной форме" required>
           </p>
-
           <p class="field-group counter">
-            <label class="field-name" for="delivery-counter">Количество:</label>
-          <div class="counter-container">
+            <span class="form-label">
+              <label class="field-name tooltip-place" for="delivery-counter" required>Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём
+                  сколько получится по требованиям
+                  к провозу багажа.</span>
+              </span>
+            </span>
+            <div class="counter-container">
             <button class="modal-button minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
             </button>
-            <input class="delivery-form-field field" type="number" min="1" max="999" value="1">
+            <input class="delivery-form-field counter-field" type="number" id="delivery-counter" min="1" max="999" value="1">
             <button class="modal-button plus" type="button">
               <span class="visually-hidden">Увеличеть</span>
             </button>
-            </p>
-          </div>
-          <a class="button-send delivery-form-send" href="#">Отправить</a>
+          </p>
+            </div>
+          <button class="button-send delivery-form-send" type="submit">Отправить</button>
         </form>
       </section>
     </div>
