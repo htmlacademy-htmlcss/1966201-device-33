@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -23,6 +25,11 @@
         <ul class="navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
+              <svg class="svg-login" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path
+                  d="M0 12.3889H13C12.8 9.78892 10.9 7.58892 8.3 6.88892C9.3 6.28892 10 5.18892 10 3.88892C10 1.98892 8.4 0.388916 6.5 0.388916C4.6 0.388916 3 1.98892 3 3.88892C3 5.18892 3.7 6.28892 4.7 6.88892C2.1 7.58892 0.2 9.78892 0 12.3889Z"
+                  fill="black" />
+              </svg>
               <span class="login">
                 Войти
               </span>
@@ -30,6 +37,11 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
+              <svg class="svg-compare" width="10" height="13" viewBox="0 0 10 13" fill="none">
+                <path d="M6 0.388916H4V12.3889H6V0.388916Z" fill="black" />
+                <path d="M2 4.38892H0V12.3889H2V4.38892Z" fill="black" />
+                <path d="M10 3.38892H8V12.3889H10V3.38892Z" fill="black" />
+              </svg>
               <span class="compare">
                 Сравнить
               </span>
@@ -37,17 +49,61 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
+              <svg class="svg-cart" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path
+                  d="M15.3 5.38892L11.8 5.58892L8.6 0.688916C8.5 0.488916 8.2 0.388916 8 0.388916C7.8 0.388916 7.5 0.488916 7.4 0.688916L4.2 5.58892H0.7C0.3 5.58892 0 5.88892 0 6.28892C0 6.38892 0 6.38892 0 6.48892L1.9 13.2889C2.1 13.9889 2.6 14.3889 3.3 14.3889H12.7C13.4 14.3889 13.9 13.9889 14.1 13.2889L16 6.38892C16 6.28892 16 6.28892 16 6.18892C16 5.78892 15.7 5.38892 15.3 5.38892ZM8 2.28892L10.2 5.48892H5.9L8 2.28892Z"
+                  fill="black" />
+              </svg>
               <span class="cart">
                 Корзина
               </span>
             </a>
+            <div class="popover popover-cart">
+              <button class="popover-close-button button-light">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <a href="" class="cart-item-link">
+                      <div class="cart-item-img-container">
+                        <img src="../1966201-device-33/images/cart-img-1.jpg" alt=" " class="cart-item-img">
+                      </div>
+                      <p class="cart-item-title">Любительская селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a href="" class="cart-item-link">
+                      <div class="cart-item-img-container">
+                        <img src="../1966201-device-33/images/cart-img-2.jpg" alt=" " class="cart-item-img">
+                      </div>
+                      <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="total">
+                  <p class="total-items">Товаров: 2</p>
+                  <p class="total-price">Сумма: 2000 ₽</p>
+                </div>
+                <div class="open-cart-button-conainer">
+                  <button class="open-cart-button">Открыть корзину</button>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
       <div class="navigation-service_container">
         <ul class="navigation-list navigation-service">
           <li class="navigation-service">
-            <a class="navigation-link" href="catalog.html">
+            <a class="navigation-link">
               <span class="catalog">Каталог товаров</span>
             </a>
             <ul class="catalog-sublist">
@@ -95,6 +151,14 @@
             <ul class="slider">
               <li class="slider-item">
                 <div class="slider-img-container">
+                  <div class="slider-button_container">
+                    <button class="slider-button slider-prev" type="button">
+                      <span class="visually-hidden">Открыть предыдущий экран слайдера</span>
+                    </button>
+                    <button class="slider-button slider-next" type="button">
+                      <span class="visually-hidden">Открыть следующий экран слайдера</span>
+                    </button>
+                  </div>
                   <img src="images/slider-images/slider-image-1.png" alt="Квадрокоптер" class="slider-img" width="560"
                     height="560">
                 </div>
@@ -173,7 +237,8 @@
           <h2 class="visually-hidden">Управление слайдером</h2>
           <ul class="slider-bullets">
             <li class="slider-bullets-item">
-              <button type="button" class="slider-bullets-button" aria-label="Открыть первый экран слайдера"></button>
+              <button type="button" class="slider-bullets-button slider-bullets-button-current"
+                aria-label="Открыть первый экран слайдера"></button>
             </li>
             <li class="slider-bullets-item">
               <button type="button" class="slider-bullets-button" aria-label="Открыть второй экран слайдера"></button>
@@ -182,14 +247,7 @@
               <button type="button" class="slider-bullets-button" aria-label="Открыть третий экран слайдера"></button>
             </li>
           </ul>
-          <div class="slider-button_container">
-            <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Открыть предыдущий экран слайдера</span>
-            </button>
-            <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Открыть следующий экран слайдера</span>
-            </button>
-          </div>
+
         </div>
       </section>
       <section class="catalog-list">
@@ -197,38 +255,38 @@
         <div class="catalog-list-container">
           <ul class="catalog-list">
             <li class="catalog-item">
-              <div class="catalog-vr-img"></div>
               <a class="catalog-item__link" href="#">
+                <div class="catalog-vr-img"></div>
                 Виртуальная реальность
               </a>
             </li>
             <li class="catalog-item">
-              <div class="catalog-selfie-stick-img"></div>
               <a class="catalog-item__link" href="catalog.html#">
+                <div class="catalog-selfie-stick-img"></div>
                 Моноподы <br> для селфи
               </a>
             </li>
             <li class="catalog-item">
-              <div class="catalog-action-cameras-img"></div>
               <a class="catalog-item__link" href="#">
+                <div class="catalog-action-cameras-img"></div>
                 Экшн-камеры
               </a>
             </li>
             <li class="catalog-item">
-              <div class="catalog-fitnes-bracelets-img"></div>
               <a class="catalog-item__link" href="#">
+                <div class="catalog-fitnes-bracelets-img"></div>
                 Фитнес-браслеты
               </a>
             </li>
             <li class="catalog-item">
-              <div class="catalog-smart-watches-img"></div>
               <a class="catalog-item__link" href="#">
+                <div class="catalog-smart-watches-img"></div>
                 Умные часы
               </a>
             </li>
             <li class="catalog-item">
-              <div class="catalog-quadrocopter-img"></div>
               <a class="catalog-item__link" href="#">
+                <div class="catalog-quadrocopter-img"></div>
                 Квадрокоптеры
               </a>
             </li>
@@ -240,28 +298,28 @@
         <div class="service-slider-container">
           <ul class="service-list">
             <li class="service_name">
-              <a class="services__link" aria-label="Открыть вкладку доставка">Доставка</a>
+              <button class="services-button" aria-label="Открыть вкладку доставка">Доставка</button>
             </li>
             <li class="service_name">
-              <a class="services__link" aria-label="Открыть вкладку гарантия">Гарантия</a>
+              <button class="services-button" aria-label="Открыть вкладку гарантия">Гарантия</button>
             </li>
             <li class="service_name">
-              <a class="services__link" aria-label="Открыть вкладку кредит">Кредит</a>
+              <button class="services-button" aria-label="Открыть вкладку кредит">Кредит</button>
             </li>
           </ul>
           <ul class="service-slider">
-            <li class="service-slider-item">
+            <li class="service-slider-item delivery-img">
               <h2 class="service-title">Доставка</h2>
               <p class="service-description">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
-                бесплатно!Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="service-slider-item">
+            <li class="service-slider-item guarantee-img">
               <h2 class="service-title">Гарантия</h2>
               <p class="service-description">Если из-за возгорания купленного у нас товара у вас<br>
                 сгорит дом — не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.</p>
             </li>
-            <li class="service-slider-item">
+            <li class="service-slider-item credit-img">
               <h2 class="service-title">Кредит</h2>
               <p class="service-description">Залезть в долговую яму стало проще! Кредитные<br>
                 консультанты подберут для вас наиболее выгодные<br>
@@ -304,7 +362,7 @@
             <li class="info-description-time">пн—пт: с 10:00 до 22:00</li>
             <li class="info-description-time">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <a class="email-us" href="#">Напшите нам</a>
+          <a class="email-us" href="#">Напишите нам</a>
         </div>
       </section>
   </div>
@@ -330,7 +388,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer_container">
+    <div class="page-footer-container">
       <a class="footer-logo" href="index.html">
         <img class="footer-logo-img" src="images/logo-footer.svg" alt="Логотип">
       </a>
@@ -372,11 +430,66 @@
           </ul>
         </div>
         <a class="html-academy-logo" href="https://htmlacademy.ru/">
-          <img class="html-academy-logo-img" src="images/htmlacademy.svg" alt="Логотип HTML Academy">
+          <svg width="115" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1a3.7 3.7 0 0 0-3.4-2.1c-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7a4.9 4.9 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5a3.2 3.2 0 0 1 3.2-2.6ZM98.2 17.9a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
+              fill="#FFC700" />
+          </svg>
         </a>
       </section>
     </div>
   </footer>
+
+  <div class="modal-container">
+    <div class="modal modal-delivery">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group name">
+            <label class="field-name" for="delivery-name">Ваше имя:</label>
+            <input class="delivery-form-field field" type="text" id="delivery-name" name="delivery-name"
+              placeholder="Введите имя" required>
+          </p>
+          <p class="field-group email">
+            <label class="field-name" for="delivery-email">Ваш e-mail:</label>
+            <input class="delivery-form-field email-field field" type="email" id="delivery-email" name="delivery-email"
+              placeholder="Введите e-mail" required>
+          </p>
+          <p class="field-group subject">
+            <label class="field-name" for="delivery-subject">Что нужно привезти:</label>
+            <input class="delivery-form-field field" type="text" id="delivery-subject" name="delivery-subject"
+              placeholder="В свободной форме" required>
+          </p>
+          <p class="field-group counter">
+            <span class="form-label">
+              <label class="field-name tooltip-place" for="delivery-counter" required>Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём
+                  сколько получится по требованиям
+                  к провозу багажа.</span>
+              </span>
+            </span>
+            <div class="counter-container">
+            <button class="modal-button minus" type="button">
+              <span class="visually-hidden">Уменьшить</span>
+            </button>
+            <input class="delivery-form-field counter-field" type="number" id="delivery-counter" min="1" max="999" value="1">
+            <button class="modal-button plus" type="button">
+              <span class="visually-hidden">Увеличеть</span>
+            </button>
+          </p>
+            </div>
+          <button class="button-send delivery-form-send" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
 </body>
 
 </html>
