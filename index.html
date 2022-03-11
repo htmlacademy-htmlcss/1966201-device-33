@@ -70,6 +70,17 @@
                       <span class="visually-hidden">Удалить из корзины</span>
                     </button>
                   </li>
+                  <li class="cart-item">
+                    <a href="" class="cart-item-link">
+                      <div class="cart-item-img-container">
+                        <img src="../1966201-device-33/images/cart-img-2.jpg" alt=" " class="cart-item-img">
+                      </div>
+                      <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
                 </ul>
                 <div class="total">
                   <p class="total-items">Товаров: 2</p>
@@ -84,28 +95,28 @@
         </ul>
       </div>
       <div class="navigation-service_container">
-        <button class="catalog-button-open catalog-button-close" type="button">Каталог товаров
-        </button>
-        <ul class="catalog-sublist">
-          <div class="catalog-sublist-container">
+        <div class="catalog-sublist_container">
+          <a class="catalog-button-open catalog-button-close" href="#">Каталог товаров
+          </a>
+          <ul class="catalog-sublist">
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Виртуальная реальность</a>
-              <a href="" class="category-link">Моноподы для cелфи</a>
-              <a href="" class="category-link">Экшн-камеры</a>
+              <a href="#" class="category-link">Виртуальная реальность</a>
+              <a href="#" class="category-link">Моноподы для cелфи</a>
+              <a href="#" class="category-link">Экшн-камеры</a>
             </li>
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Фитнес-браслеты</a>
-              <a href="" class="category-link">Умные часы</a>
+              <a href="#" class="category-link">Фитнес-браслеты</a>
+              <a href="#" class="category-link">Умные часы</a>
             </li>
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Квадрокоптеры</a>
+              <a href="#" class="category-link">Квадрокоптеры</a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
         <ul class="navigation-list navigation-service">
           <li class="navigation-service">
             <a class="navigation-service-link" href="#">
-              <span class="delivery">Доставка</span>
+              <span class="delivery">Доставка</span> <!-- добавить service-active -->
             </a>
           </li>
           <li class="navigation-service">
@@ -192,18 +203,18 @@
                 </div>
                 <div class="slider-description">
                   <h3 class="visually-hidden">Селфи-палка</h3>
-                  <p class="slider-text">Делай селфи,<bR>
+                  <p class="slider-text">Делай селфи,<br>
                     как Бен Стиллер!</p>
                   <p class="slider-text__description">Самая длинная палка для селфи доступна в нашем магазине.<br>
                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
                   </p>
                   <a href="" class="slider-link button-yellow">Подробнее</a>
                   <ul class="slider-features">
-                    <li class="slider-features-item">
+                    <li class="slider-features-item item-margin">
                       <span class="slider-feature-value">8,5 м</span>
                       <span class="slider-feature-title">Длина палки</span>
                     </li>
-                    <li class="slider-features-item">
+                    <li class="slider-features-item item-margin">
                       <span class="slider-feature-value">5 кг</span>
                       <span class="slider-feature-title">Вес палки</span>
                     </li>
@@ -221,7 +232,7 @@
             <li class="slider-bullets-item">
               <button type="button" class="slider-bullets-button slider-bullets-button-current"
                 aria-label="Открыть первый экран слайдера"></button>
-                <em class="slider-bullets-button-focus"></em>
+              <em class="slider-bullets-button-focus"></em>
             </li>
             <li class="slider-bullets-item">
               <button type="button" class="slider-bullets-button" aria-label="Открыть второй экран слайдера"></button>
@@ -238,7 +249,7 @@
       <section class="catalog-list">
         <h2 class="visually-hidden">Список категорий каталога</h2>
         <div class="catalog-list-container">
-          <ul class="catalog-list">
+          <ul class="catalog-list">            
             <li class="catalog-item">
               <a class="catalog-item__link" href="#">
                 <div class="catalog-vr-img"></div>
@@ -284,7 +295,8 @@
           <div class="service-slider-button-container">
             <ul class="service-list">
               <li class="service_name">
-                <button class="services-button button-yellow" aria-label="Открыть вкладку доставка">Доставка</button>
+                <button class="services-button button-yellow service-button--active"
+                  aria-label="Открыть вкладку доставка">Доставка</button>
               </li>
               <li class="service_name">
                 <button class="services-button button-yellow" aria-label="Открыть вкладку гарантия">Гарантия</button>
@@ -297,7 +309,8 @@
           <ul class="service-slider">
             <li class="service-slider-item delivery-img">
               <h2 class="service-title">Доставка</h2>
-              <p class="service-description">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
+              <p class="service-description">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду
+                совершенно
                 бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
             <li class="service-slider-item guarantee-img">
@@ -371,9 +384,8 @@
         Это бесплатно
       </p>
     </div>
-    </div>
   </section>
-  </main>
+</main>
 
   <footer class="page-footer">
     <div class="page-footer-container">
@@ -452,7 +464,7 @@
           </p>
           <p class="field-group counter">
             <span class="form-label">
-              <label class="field-name tooltip-place" for="delivery-counter" required>Количество:</label>
+              <label class="field-name tooltip-place" for="delivery-counter">Количество:</label>
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                 </button>
@@ -461,6 +473,7 @@
                   к провозу багажа.</span>
               </span>
             </span>
+          </p>
           <div class="counter-container">
             <button class="modal-button minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
@@ -470,8 +483,8 @@
             <button class="modal-button plus" type="button">
               <span class="visually-hidden">Увеличеть</span>
             </button>
-            </p>
           </div>
+          
           <button class="button-send delivery-form-send button-yellow" type="submit">Отправить</button>
         </form>
       </section>

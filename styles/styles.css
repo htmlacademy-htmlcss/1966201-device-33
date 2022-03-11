@@ -30,8 +30,7 @@
     font-display: swap;
 }
 
-:root {
-    --silver: #CECECE;
+:root {    
     --black: #000000;
     --dark: #444444;
     --gray: #dcdcdc;
@@ -316,8 +315,8 @@ body {
 
 .popover-cart {
     display: none;
-    width: 320px;
-    height: 302px;
+    width: 320px;   
+    z-index: 2;
 }
 
 .popover-cart .popover-close-button {
@@ -496,24 +495,17 @@ body {
 }
 
 .catalog-button-open {
-    border: none;
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 21px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 293px;
-    margin: 0;
-    padding-left: 2px;
+    width: 291px;
     z-index: 1;
+    position: relative;
+    text-decoration: none;
+    color: var(--black);
+    padding: 2px 0 0 2px;
 }
 
 .catalog-button-close::after {
@@ -531,18 +523,12 @@ body {
     opacity: 0.3;
 } 
 
-
-
 .catalog-button-open:active::after, .catalog-button-open:hover::after{
     opacity: 1;
 }
 
 .catalog-button-close + .catalog-sublist-container {
     display: none;
-}
-
-.catalog-button-open + .catalog-sublist-container {
-    display: grid;
 }
 
 .catalog-button-open:focus {
@@ -552,35 +538,29 @@ body {
 .catalog-sublist {
     list-style: none;
     position: absolute;
-    padding: 0;
-    left: 0;
-}
-
-.catalog-sublist-container {
+    padding: 15px 60px 40px;
+    margin: 0;
     display: none;
-    grid-template-columns: 249px 212px 211px;
-    grid-template-rows: 180px;
-    margin-top: 20px;
     background: var(--yellow-light);
-    width: 1040px;
-    padding: 26px 60px 0 60px;
-    grid-auto-flow: column;
+    width: 1160px;
+    left: -1px;
+    box-sizing: border-box; 
 }
 
-.catalog-sublist__category {
-    display: grid;
-    grid-template-rows: repeat(4, 36px);
-    grid-auto-flow: row;
+
+.catalog-sublist__category {   
+    min-width: 161px;
+    margin-right: 52px;
 }
 
 .category-link {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     color: var(--black);
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
     width: fit-content;   
     align-self: center;
     padding: 2px;
@@ -594,16 +574,16 @@ body {
     text-decoration: none;
 }
 
-.category-link:active {
-    text-decoration: underline;
+.service-active {
+    border-bottom: 2px solid;
 }
 
 .navigation-list {
     display: grid;
-    grid-template-columns: 121px 121px 127px;
+    grid-template-columns: 127px 127px 128px;
     list-style: none;
     padding: 0;
-    column-gap: 51px;
+    column-gap: 45px;
     justify-content: end;
 }
 
@@ -622,10 +602,6 @@ body {
     outline: 2px solid var(--purple);
 }
 
-.navigation-service-link:active {
-    border-bottom: 2px solid;
-}
-
 .navigation-service-link:disabled {
     text-decoration: none;
 }
@@ -633,6 +609,8 @@ body {
 .navigation-service-link {
     color: var(--black);
     text-decoration: none;
+    border-bottom: solid 2px transparent;
+    padding-left: 2px;
 }
 
 .navigation-user-link:focus {
@@ -703,7 +681,7 @@ body {
     content: "0" counter(slider);
     position: absolute;
     width: 100%;
-    height: 135px;
+    height: 132px;
     font-family: Rubik;
     font-style: normal;
     font-weight: bold;
@@ -715,11 +693,15 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: -5;
+    padding-top: 25px;
+    padding-right: 48px;
+    box-sizing: border-box;
 }
 
 .slider-container {    
     justify-content: space-between;
-    position: relative;
+    position: relative;    
+    margin-bottom: 53px;
 }
 
 .slider-frame {
@@ -747,7 +729,7 @@ body {
 
 .slider-button_container {
     position: absolute;
-    top: 40%;
+    top: 223px;
     width: 100%;
     transform: translateY(-50%);
     display: flex;
@@ -791,14 +773,14 @@ body {
     font-weight: 800;
     font-size: 50px;
     line-height: 50px;
-    margin-top: 106px;
+    margin-top: 104px;
     margin-bottom: 29px; 
 }
 
 .slider-text__description {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    margin-bottom: 61px;
+    margin-bottom: 56px;
 }
 
 .slider-link {   
@@ -806,7 +788,7 @@ body {
     font-size: 18px;
     line-height: 21px;
     text-align: center;  
-    padding: 10px 20px; 
+    padding: 10px 38px;
 }
 
 .slider-link:focus {
@@ -820,14 +802,25 @@ body {
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;    
-    margin-top: 49px;
-    justify-content: space-between;
+    margin-top: 54px;
+    justify-content: flex-start;
     list-style: none;
+}
+
+.slider-features-item {
+    min-width: 70px;
+    margin-right: 21px;
+}
+
+.item-margin {
+    margin-right: 41px;
 }
 
 .slider-feature-value {
     font-size: 36px;
     line-height: 30px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .slider-feature-title {
@@ -850,7 +843,8 @@ body {
 }
 
 .slider-bullets-item {         
-    margin: 0 ;   
+    margin: 0 ; 
+    position: relative;
 }
 
 .slider-bullets-button {
@@ -906,7 +900,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;   
+    flex-direction: row;    
 }
 
 .catalog-list {
@@ -915,13 +909,14 @@ body {
     margin: 0 auto;
     padding: 0;
     width: 1160px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.02em;
     text-decoration: none;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .catalog-item {
@@ -1042,19 +1037,20 @@ body {
 .service-slider-container {
     display: flex;
     align-items: center;
-    margin-bottom: 155px;
+    margin-bottom: 143px;
+    position: relative;
 }
 
 .service-slider-container::after {
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 289px;
     background-color: var(--light);
     position: absolute;
     display: block;
-    top: 1251px;
-    left: 0;
-    z-index: -2
+    top: 102px;
+    left: calc(50% - 50vw);
+    z-index: -2;
 }
 
 .service-slider-button-container {
@@ -1086,9 +1082,20 @@ body {
     padding: 0px;
 }
 
-.services-button:active {
+.service-button--active {
     background-color: var(--black);
-    color: var(--yellow-light);        
+    color: var(--yellow-light);
+    position: relative; 
+}
+
+.service-button--active::before {
+    content: "";
+    width: 280px;
+    position: absolute;
+    height: 100%;
+    background-color: var(--black);
+    left: 0;
+    top: 20px;
 }
 
 .service-slider  {
@@ -1111,6 +1118,7 @@ body {
     color: var(--dark);
     padding: 0px 0px 0 0;
     margin: 0; 
+    width: 452px;
 }
 
 .service-slider-item:nth-child(1) {
@@ -1219,7 +1227,7 @@ body {
 .info-title {
     font-size: 50px;
     line-height: 50px;
-    margin-bottom: 48px ;
+    margin-bottom: 45px ;
 }
 
 .info-description {
@@ -1300,8 +1308,7 @@ section.info {
 }
 
 .info-contacts_container {    
-    float: right;
-    margin-bottom: 70px;
+    float: right;   
     width: 532px;   
 }
 
@@ -1351,6 +1358,7 @@ p.info-title {
     flex-direction: column;
     align-items: center;
     background: var(--light);
+    margin-top: 73px;
 }
 
 .subscription_container_item {
@@ -1358,7 +1366,7 @@ p.info-title {
     justify-content: space-between;
     width: 1160px;
     height: 100px;
-    margin-top: 64px;
+    margin-top: 65px;
     margin-bottom: 144px;
 }
 
@@ -1368,7 +1376,6 @@ p.info-title {
     width: 1160px;
     height: 57px;
     margin-bottom: 56px;
-
 }
 
 .subscription-subtitle {
@@ -1387,24 +1394,26 @@ p.info-title {
 .subscription-form {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    display: flex;
+    display: flex;    
 }
 
 .subscription-field {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
-    padding-left: 17px;          
+    padding-left: 16px;
     width: 557px;
-    height: 55px;    
     box-sizing: border-box;
-    background: none;
-    border-width: 0px 0px 3px 0px;    
-    border-style: solid;
-    border-color: var(--gray);
-    opacity: 0.5;
-    color: var(--dark);
-    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--gray);
+    color: rgba(68,68,68,0.5);
+    outline: none;    
+}
+
+.subscription-field:focus {
+    background: #dcdcdc;
+    color: rgb(68,68,68);
 }
 
 .subscription-button {
@@ -1414,7 +1423,7 @@ p.info-title {
     position: static;
     width: 253px;
     height: 57px;
-    border: 3px solid var(--silver);
+    border: 3px solid var(--gray);
     box-sizing: border-box;
     padding: 14px 37px;
     align-items: center;
@@ -1422,6 +1431,20 @@ p.info-title {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-size: inherit;
+    cursor: pointer;
+}
+
+.subscription-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.subscription-button:active {
+    color: rgba(255,255,255, 0.3);
+}
+
+.subscription-button:focus {
+    outline: 2px solid var(--purple);
 }
 
 .its-free {
@@ -1431,6 +1454,7 @@ p.info-title {
     line-height: 30px;
     color: var(--dark);
     position: relative;
+    margin: 12px 0;
 }
 
 .its-free::before {
@@ -1441,6 +1465,7 @@ p.info-title {
     position: absolute;
     margin: 3px auto;
     left: -31px;
+    top: 5px;
 }
 
 /* Footer */
@@ -1517,6 +1542,8 @@ p.info-title {
 
 .service-link:focus {
     outline: 2px solid var(--purple);
+    border-bottom: none;
+    color: var(--white);
 }
 
 .footer-social-list {
@@ -1761,10 +1788,15 @@ p.info-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
+
+.item-card {
+    position: relative;
+}
 
 .item-card-link {
     text-decoration: none;
+    display: block;
 }
 
 .item-card-title {
@@ -1782,6 +1814,22 @@ p.info-title {
     line-height: 21px;
     text-align: right;
     color: var(--dark);
+}
+
+.item-card-hover {
+    display: none;
+}
+
+.item-card-link:hover + .item-card-hover {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .catalog-filter { 
@@ -2129,14 +2177,6 @@ p.info-title {
     background: var(--light);
     border: none;
 }
-
-/* .email-field:valid {
-    outline: none;
-}
-
-.email-field:required:invalid {
-    outline:  2px solid var(--red);
-} */
 
 .delivery-form {
     display: grid;

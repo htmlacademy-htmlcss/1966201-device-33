@@ -86,8 +86,8 @@
       <div class="navigation-service_container">
         <button class="catalog-button-open catalog-button-close" type="button">Каталог товаров
         </button>
-        <ul class="catalog-sublist">
-          <div class="catalog-sublist-container">
+        <div class="catalog-sublist-container">
+          <ul class="catalog-sublist">
             <li class="catalog-sublist__category">
               <a href="" class="category-link">Виртуальная реальность</a>
               <a href="" class="category-link">Моноподы для cелфи</a>
@@ -100,8 +100,8 @@
             <li class="catalog-sublist__category">
               <a href="" class="category-link">Квадрокоптеры</a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
         <ul class="navigation-list navigation-service">
           <li class="navigation-service">
             <a class="navigation-service-link" href="#">
@@ -217,7 +217,8 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden  control-input" type="radio" name="Bluetooth" value="with-bluetooth" checked>
+                    <input class="visually-hidden  control-input" type="radio" name="Bluetooth" value="with-bluetooth"
+                      checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Есть</span>
                   </label>
@@ -247,17 +248,23 @@
               <span class="visually-hidden">От дорогих к дешевым</span>
             </a>
           </div>
-          <div class="catalog-container">
-            <div class="item-card">
+          <ul class="catalog-container">
+            <li class="item-card">
               <a class="item-card-link" href="#">
                 <img class="item-card-image" src="images/catalog-images/product-1.jpg" alt="Любительская селфи-палка"
                   width="360" height="380">
-                  <div class="item-card-price-container">
-                <h3 class="item-card-title">Любительская селфи-палка</h3>
-              </a>
-              <b class="item-card-price">500 ₽</b>
-            </div>
-            </div>
+                <div class="item-card-price-container">
+                  <h3 class="item-card-title">Любительская селфи-палка</h3>
+                  <b class="item-card-price">500 ₽</b>
+                </div>
+              </a>              
+              <div class="item-card-hover">
+                <a href="#" class="item-card-hover-link button-yellow">Подробнее</a>
+              </div>
+            </li>
+
+
+
             <div class="item-card">
               <a class="item-card-link" href="#">
                 <img class="item-card-image" src="images/catalog-images/product-2.jpg"
@@ -282,7 +289,7 @@
               </a>
               <b class="item-card-price">1 500 ₽</b>
             </div>
-          </div>
+          </ul>
 
           <button class="pagination-show-more" type="button">
             Загрузить ещё
