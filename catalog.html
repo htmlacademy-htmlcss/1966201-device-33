@@ -69,7 +69,7 @@
                     <button type="button" class="cart-item-button">
                       <span class="visually-hidden">Удалить из корзины</span>
                     </button>
-                  </li>
+                  </li>                  
                 </ul>
                 <div class="total">
                   <p class="total-items">Товаров: 2</p>
@@ -84,28 +84,28 @@
         </ul>
       </div>
       <div class="navigation-service_container">
-        <button class="catalog-button-open catalog-button-close" type="button">Каталог товаров
-        </button>
-        <div class="catalog-sublist-container">
+        <div class="catalog-sublist_container">
+          <a class="catalog-button-open catalog-button-close" href="#">Каталог товаров
+          </a>
           <ul class="catalog-sublist">
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Виртуальная реальность</a>
-              <a href="" class="category-link">Моноподы для cелфи</a>
-              <a href="" class="category-link">Экшн-камеры</a>
+              <a href="#" class="category-link">Виртуальная реальность</a>
+              <a href="#" class="category-link">Моноподы для cелфи</a>
+              <a href="#" class="category-link">Экшн-камеры</a>
             </li>
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Фитнес-браслеты</a>
-              <a href="" class="category-link">Умные часы</a>
+              <a href="#" class="category-link">Фитнес-браслеты</a>
+              <a href="#" class="category-link">Умные часы</a>
             </li>
             <li class="catalog-sublist__category">
-              <a href="" class="category-link">Квадрокоптеры</a>
+              <a href="#" class="category-link">Квадрокоптеры</a>
             </li>
           </ul>
         </div>
         <ul class="navigation-list navigation-service">
           <li class="navigation-service">
             <a class="navigation-service-link" href="#">
-              <span class="delivery">Доставка</span>
+              <span class="delivery">Доставка</span> <!-- добавить service-active -->
             </a>
           </li>
           <li class="navigation-service">
@@ -122,14 +122,12 @@
       </div>
     </nav>
   </header>
-  <div class="page-container">
-    <main class="main-inner main-container">
-
+ 
+    <main class="main-inner main-container">        
       <header class="inner-header">
         <h2 class="visually-hidden">Категория моноподы для селфи</h2>
         <p class="category-title">Моноподы для селфи</p>
-      </header>
-      <ul class="breadcrumbs">
+       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
@@ -140,6 +138,7 @@
           <a class="breadcrumbs-link">Моноподы для селфи</a>
         </li>
       </ul>
+      </header>     
       <section class="catalog-products">
         <h3 class="visually-hidden">Фильтр</h3>
         <div class="filter-container">
@@ -241,10 +240,10 @@
             <select class="select-control" aria-label="Сортировка">
               <option value="popular">Популярные</option>
             </select>
-            <a class="button-up" href="#">
+            <a class="sorting-button button-up" href="#">
               <span class="visually-hidden">От дешевых к дорогим</span>
             </a>
-            <a class="button-down" href="#">
+            <a class="sorting-button button-down" href="#">
               <span class="visually-hidden">От дорогих к дешевым</span>
             </a>
           </div>
@@ -262,35 +261,42 @@
                 <a href="#" class="item-card-hover-link button-yellow">Подробнее</a>
               </div>
             </li>
-
-
-
-            <div class="item-card">
+            <li class="item-card">
               <a class="item-card-link" href="#">
                 <img class="item-card-image" src="images/catalog-images/product-2.jpg"
                   alt="Профессиональная селфи-палка" width="360" height="380">
                 <h3 class="item-card-title">Профессиональная селфи-палка</h3>
               </a>
               <b class="item-card-price">1 500 ₽</b>
-            </div>
-            <div class="item-card">
+              <div class="item-card-hover">
+                <a href="#" class="item-card-hover-link button-yellow">Подробнее</a>
+              </div>
+            </li>
+
+            <li class="item-card">
               <a class="item-card-link" href="#">
                 <img class="item-card-image" src="images/catalog-images/product-3.jpg" alt="Непотопляемая селфи-палка"
                   width="360" height="380">
                 <h3 class="item-card-title">Непотопляемая селфи-палка</h3>
               </a>
               <b class="item-card-price">2 500 ₽</b>
-            </div>
-            <div class="item-card">
+              <div class="item-card-hover">
+                <a href="#" class="item-card-hover-link button-yellow">Подробнее</a>
+              </div>
+            </li>
+            <li class="item-card">
               <a class="item-card-link" href="#">
                 <img class="item-card-image" src="images/catalog-images/product-4.jpg"
                   alt="Селфи-палка «Следуй за мной»" width="360" height="380">
                 <h3 class="item-card-title">Селфи-палка «Следуй за мной»</h3>
               </a>
               <b class="item-card-price">1 500 ₽</b>
-            </div>
+              <div class="item-card-hover">
+                <a href="#" class="item-card-hover-link button-yellow">Подробнее</a>
+              </div>
+            </li>
           </ul>
-
+          
           <button class="pagination-show-more" type="button">
             Загрузить ещё
           </button>
@@ -318,13 +324,13 @@
               </li>
               <li class="pagination-item">
                 <a class="pagination-link pagination-next" href="#">
-                  <span class="pagination-link">Вперед</span>
+                  <span class="pagination-link">Вперёд</span>
                 </a>
               </li>
             </ol>
           </div>
       </section>
-  </div>
+  
   </div>
   </main>
   <footer class="page-footer">
