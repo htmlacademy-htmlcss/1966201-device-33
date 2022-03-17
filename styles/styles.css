@@ -92,7 +92,6 @@ body {
   width: 1160px;
   margin: 0 auto;
   padding-top: 84px;
-  padding-bottom: 19px;
 }
 
 /* Strip */
@@ -119,19 +118,23 @@ body {
   height: 38px;
 }
 
-.main-logo:focus,
-.footer-logo:focus {
-  outline: 2px solid var(--purple);
+.footer-logo {
+  margin-bottom: 26px;
 }
 
-.main-logo:hover,
-.footer-logo:hover {
+.footer-logo:hover,
+.main-logo:hover {
   opacity: 0.6;
 }
 
 .main-logo:active,
 .footer-logo:active {
   opacity: 0.3;
+}
+
+.main-logo:focus,
+.footer-logo:focus {
+  outline: 2px solid var(--purple);
 }
 
 /* Navigation */
@@ -506,6 +509,12 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.open-cart-button:disabled {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: var(--white);
+}
+
 .open-cart-button-conainer {
   padding: 20px;
 }
@@ -520,6 +529,10 @@ body {
   margin-top: 27px;
   display: flex;
   justify-content: space-between;
+}
+
+.catalog-header-container {
+  margin-bottom: 18px;
 }
 
 .catalog-button-open {
@@ -573,7 +586,7 @@ body {
   position: absolute;
   padding: 15px 60px 40px;
   margin: 0;
-  display: none;/* change to flex for sublist show */
+  display: none; /* change to flex for sublist show */
   background: var(--yellow-light);
   width: 1160px;
   left: -1px;
@@ -582,6 +595,8 @@ body {
 
 .catalog-sublist--open .catalog-sublist {
   display: flex;
+  width: 1160px;
+  flex-wrap: wrap;
 }
 
 .catalog-sublist__category {
@@ -677,8 +692,13 @@ body {
   margin: 0 auto;
 }
 
+.main-index {
+  padding-top: 19px;
+}
+
 .main-container {
   flex-grow: 1;
+  overflow: hidden; 
 }
 
 .button-yellow {
@@ -710,11 +730,22 @@ body {
 }
 
 .button-yellow:hover::before {
-  height: 40px;
+  min-height: 40px;
+}
+
+.button-yellow:active::before {
+  background-color: var(--yellow-dark);
 }
 
 .button-yellow:focus {
   outline: 2px solid var(--purple);
+}
+
+.button-yellow-disabled {
+  z-index: 5;
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }
 
 /* Slider */
@@ -743,13 +774,12 @@ body {
 .slider-container {
   justify-content: space-between;
   position: relative;
-  margin-bottom: 53px;
+  margin-bottom: 61px;
   margin-top: -19px;
 }
 
 .slider-frame {
   width: 1160px;
-  height: 560px;
   overflow: hidden;
 }
 
@@ -781,7 +811,7 @@ body {
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 9;
 }
 
 .slider-button {
@@ -890,7 +920,7 @@ body {
   padding: 0;
   margin: 0 auto;
   position: absolute;
-  top: 357px;
+  bottom: 195px;
   left: 1084px;
   width: 64px;
   justify-content: space-between;
@@ -962,8 +992,9 @@ body {
 }
 
 .catalog-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  gap: 40px;
   margin: 0 auto;
   padding: 0;
   width: 1160px;
@@ -974,7 +1005,6 @@ body {
   letter-spacing: -0.02em;
   text-decoration: none;
   list-style: none;
-  flex-wrap: wrap;
 }
 
 .catalog-item {
@@ -1539,6 +1569,11 @@ body {
 
 .subscription-button:focus {
   outline: 2px solid var(--purple);
+  pointer-events: none;
+}
+
+.subscription-button:disabled {
+  pointer-events: none;
 }
 
 .its-free {
@@ -1579,12 +1614,6 @@ body {
   color: var(--white);
   display: flex;
   justify-content: center;
-}
-
-.footer-logo {
-  width: 145px;
-  height: 36px;
-  margin-bottom: 35px;
 }
 
 .footer-info {
@@ -2057,6 +2086,49 @@ body {
 }
 
 /* Control */
+
+.checkbox-label {
+  position: relative;
+  padding-left: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.checkbox-label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}
+
+.checkbox-label::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: 2px solid transparent;
+  display: block;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+  background: url("../images/checkmark-black.svg") no-repeat center center;
+}
+
+.checkbox-input:focus + .checkbox-label::after {
+  border-color: var(--purple);
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  border-color: var(--black);
+}
+
 .control {
   font-family: "Rubik", sans-serif;
   position: relative;
@@ -2067,94 +2139,84 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Mark */
-
-.control-mark {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #cccccc;
-  box-sizing: border-box;
-  border-radius: 3px;
-  z-index: 3;
-}
-
-.control-input:checked ~ .control-mark {
-  border: 2px solid var(--black);
-}
-
-.control:hover .control-mark,
-.control-label:hover {
+.checkbox-input:hover + .checkbox-label {
   opacity: 0.6;
 }
 
-.control:active .control-mark,
-.control-label:active {
+.checkbox-input:active + .checkbox-label {
   opacity: 0.3;
 }
 
-.control-input:disabled ~ .control-mark,
-.control-input:disabled ~ .control-label {
+.checkbox-input:disabled + .checkbox-label {
   opacity: 0.1;
 }
 
-.control:hover .control-input:disabled ~ .control-mark {
-  opacity: 0.1;
+/* Bluetooth */
+
+.radio-label {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 36px;
+  position: relative;
 }
 
-.control-input[type="checkbox"]:checked ~ .control-mark::before,
-.control-input[type="checkbox"]:checked ~ .control-mark::after {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 10px;
-  height: 10px;
+.radio-label::before {
   content: "";
-  background: url("../images/checkmark-black.svg");
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cccccc;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute;
 }
 
-.control-input-focus {
+.radio-label::after {
   content: "";
   width: 24px;
   height: 24px;
-  border: 2px solid var(--purple);
-  position: absolute;
-  top: -2px;
-  left: -4px;
-  display: none;
-  z-index: 1;
-}
-
-.control-input:focus + .control-input-focus {
   display: block;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  border: 2px solid transparent;
 }
 
+.radio-input:checked + .radio-label::after {
+  background: url("../images/radio-circle.svg") no-repeat center center;
+}
 
-/* Bluetooth */
+.radio-input:checked + .radio-label::before {
+  border-color: var(--black);
+}
+
+.radio-input:focus + .radio-label::after {
+  border-color: var(--purple);
+}
+
+.radio-input:hover + .radio-label {
+  opacity: 0.6;
+}
+
+.radio-input:active + .radio-label {
+  opacity: 0.3;
+}
+
+.radio-input:disabled + .radio-label {
+  opacity: 0.1;
+}
 
 .catalog-filter-title--bluetooth {
   margin: 0 0 19px 0;
 }
 
 .catalog-filter-list--bluetooth .catalog-filter-item:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
-.control-input[type="radio"] ~ .control-mark {
-  border-radius: 50%;
-}
-
-.control-input[type="radio"]:checked ~ .control-mark::before {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #242424;
-  border-radius: 50%;
-  content: "";
+.catalog-filter-group-bluetooth {
+  margin: 0 0 24px 0;
 }
 
 /* Filter Button */
@@ -2576,12 +2638,12 @@ body {
   opacity: 0.3;
 }
 
-.delivery-form-field:not(:placeholder-shown):invalid {
-  outline: 2px solid var(--red);
-}
-
 .delivery-form-field:not(:placeholder-shown):invalid + .delivery-form-message {
   color: var(--red);
+}
+
+.counter-error {
+  outline: 2px solid var(--red);
 }
 
 .modal-close-button {
@@ -2647,7 +2709,7 @@ body {
 }
 
 .counter-field {
-  width: 180px;
+  width: 60px;
   padding: 0 0 0 16px;
   height: 60px;
   text-align: center;
@@ -2709,7 +2771,6 @@ body {
 }
 
 .modal-button {
-  position: relative;
   width: 60px;
   height: 60px;
   display: flex;
@@ -2718,15 +2779,32 @@ body {
   cursor: pointer;
 }
 
+.modal-button:hover {
+  opacity: 0.6;
+}
+
+.modal-button:active {
+  opacity: 0.3;
+}
+
+.modal-button:focus {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.modal-button:disabled {
+  pointer-events: none;
+  background-color: #fefefe;
+  opacity: 0.3;
+}
+
 .plus {
   background: var(--light) url("../images/plus-modal.svg") center no-repeat;
-  position: absolute;
   left: 120px;
 }
 
 .minus {
   background: var(--light) url("../images/minus-modal.svg") center no-repeat;
-  position: absolute;
 }
 
 .counter-container {
@@ -2738,6 +2816,7 @@ body {
   position: relative;
   top: 33px;
   z-index: 1;
+  height: 60px;
 }
 
 .button-send {

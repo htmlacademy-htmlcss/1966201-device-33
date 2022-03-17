@@ -12,8 +12,9 @@
 
 <body>
   <header class="page-header">
+    <h1 class="visually-hidden">Интернет-магазин электротоваров Device</h1>
     <a class="main-logo" href="index.html">
-      <img class="main-logo-img" src="images/logo.svg" alt="Логотип Девайс" width="145" height="38">
+      <img class="main-logo-img" src="images/logo.svg" alt="Логотип Девайс" width="145" height="36">
     </a>
     <nav class="navigation">
       <div class="user-navigation-container">
@@ -52,7 +53,7 @@
                   <li class="cart-item">
                     <a href="" class="cart-item-link">
                       <div class="cart-item-img-container">
-                        <img src="../1966201-device-33/images/cart-img-1.jpg" alt=" " class="cart-item-img">
+                        <img src="./images/cart-img-1.jpg" alt=" " class="cart-item-img">
                       </div>
                       <p class="cart-item-title">Любительская селфи-палка</p>
                     </a>
@@ -63,7 +64,7 @@
                   <li class="cart-item">
                     <a href="" class="cart-item-link">
                       <div class="cart-item-img-container">
-                        <img src="../1966201-device-33/images/cart-img-2.jpg" alt=" " class="cart-item-img">
+                        <img src="./images/cart-img-2.jpg" alt=" " class="cart-item-img">
                       </div>
                       <p class="cart-item-title">Профессиональная селфи-палка</p>
                     </a>
@@ -127,7 +128,7 @@
   </header>
   <main class="main-container main-index">
     <div class="page-container">
-      <h1 class="visually-hidden">Интернет-магазин электротоваров Device</h1>
+     
       <section class="recommends">
         <h2 class="visually-hidden">Рекомендуемые товары</h2>
         <h2 class="visually-hidden">Слайдер</h2>
@@ -157,7 +158,7 @@
                     жалит как пчела!</p>
                   <p class="slider-text__description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                     мощным лазером, замаскированным под стандартную камеру.</p>
-                  <a href="" class="slider-link button-yellow">Подробнее</a>
+                  <a href="#" class="slider-link button-yellow">Подробнее</a> <!-- button-yellow-disabled for disabeling links -->
                   <ul class="slider-features">
                     <li class="slider-features-item">
                       <span class="slider-feature-value">800 м</span>
@@ -384,7 +385,7 @@
         <form class="subscription-form" action="https://echo.htmlacademy.ru/">
           <input class="subscription-field" placeholder="Ваш e-mail" type="email" name="subscription-email"
             id="subscription-email" required>
-          <button class="subscription-button">Подписаться</button>
+          <button class="subscription-button" disabled>Подписаться</button>
         </form>
         <p class="its-free">
           Это бесплатно
@@ -396,7 +397,7 @@
   <footer class="page-footer">
     <div class="page-footer-container">
       <a class="footer-logo" href="index.html">
-        <img class="footer-logo-img" src="images/logo-footer.svg" alt="Логотип">
+        <img class="footer-logo-img" src="images/logo-footer.svg" alt="Логотип Девайс" width="145" height="36">
       </a>
       <section class="footer-info">
         <h2 class="visually-hidden">Контакты</h2>
@@ -484,7 +485,7 @@
               </span>
             </span>
           </p>
-          <div class="counter-container">
+          <div class="counter-container"> <!-- for error outline add class: counter-error-->
             <button class="modal-button minus" type="button">
               <span class="visually-hidden">Уменьшить</span>
             </button>

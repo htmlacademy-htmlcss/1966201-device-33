@@ -12,8 +12,9 @@
 
 <body>
   <header class="page-header">
+    <h1 class="visually-hidden">Каталог товаров интернет-магазина электротоваров Device</h1>
     <a class="main-logo" href="index.html">
-      <img class="main-logo-img" src="images/logo.svg" alt="Логотип Девайс" width="145" height="38">
+      <img class="main-logo-img" src="images/logo.svg" alt="Логотип Девайс" width="145" height="36">
     </a>
     <nav class="navigation">
       <div class="user-navigation-container">
@@ -88,7 +89,7 @@
           </li>
         </ul>
       </div>
-      <div class="navigation-service_container">
+      <div class="navigation-service_container catalog-header-container">
         <div class="catalog-sublist_container">
           <a class="catalog-button-open catalog-button-close" href="#">Каталог товаров
           </a>
@@ -131,7 +132,7 @@
   </header>
 
   <main class="main-inner main-container">
-    <h1 class="visually-hidden">Каталог товаров интернет-магазина электротоваров Device</h1>
+
     <header class="inner-header">
       <h2 class="visually-hidden">Категория моноподы для селфи</h2>
       <p class="category-title">Моноподы для селфи</p>
@@ -181,67 +182,42 @@
             <legend class="catalog-filter-title catalog-filter-title--color">Цвет</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden  control-input" type="checkbox" name="color" checked>
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Чёрный</span>
-                </label>
+                <input class="visually-hidden control-input checkbox-input" id="color-black" type="checkbox"
+                  name="color-black" checked>
+                <label class="control checkbox-label" for="color-black">Чёрный</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="color" checked>
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Белый</span>
-                </label>
+                <input class="visually-hidden control-input checkbox-input" id="color-white" type="checkbox"
+                  name="color-white" checked>
+                <label class="control checkbox-label" for="color-white">Белый</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="color">
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Синий</span>
-                </label>
+                <input class="visually-hidden control-input checkbox-input" id="color-blue" type="checkbox"
+                  name="color-blue">
+                <label class="control checkbox-label" for="color-blue">Синий</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden  control-input" type="checkbox" name="color">
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Красный</span>
-                </label>
+                <input class="visually-hidden control-input checkbox-input" id="color-red" type="checkbox"
+                  name="color-red">
+                <label class="control checkbox-label" for="color-red">Красный</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden  control-input" type="checkbox" name="color">
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Розовый</span>
-                </label>
+                <input class="visually-hidden control-input checkbox-input" id="color-pink" type="checkbox"
+                  name="color-pink">
+                <label class="control checkbox-label" for="color-pink">Розовый</label>
               </li>
             </ul>
           </fieldset>
-
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-group-bluetooth">
             <legend class="catalog-filter-title catalog-filter-title--bluetooth">Bluetooth</legend>
             <ul class="catalog-filter-list catalog-filter-list--bluetooth">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden  control-input" type="radio" name="Bluetooth" value="with-bluetooth"
-                    checked>
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Есть</span>
-                </label>
+                <input class="visually-hidden control-input radio-input" type="radio" name="bluetooth" value="with-bluetooth" id="with-bluetooth" checked>                  
+                <label class="control radio-label" for="with-bluetooth">Есть</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visually-hidden  control-input" type="radio" name="Bluetooth" value="no-bluetooth">
-                  <em class="control-input-focus"></em>
-                  <span class="control-mark"></span>
-                  <span class="control-label">Нет</span>
-                </label>
+                 <input class="visually-hidden control-input radio-input" type="radio" name="bluetooth" value="no-bluetooth" id="no-bluetooth">                       
+                <label class="control radio-label" for="no-bluetooth">Нет</label>
               </li>
             </ul>
           </fieldset>
@@ -367,7 +343,7 @@
   <footer class="page-footer">
     <div class="page-footer-container">
       <a class="footer-logo" href="index.html">
-        <img class="footer-logo-img" src="images/logo-footer.svg" alt="Логотип Device">
+        <img class="footer-logo-img" src="images/logo-footer.svg" alt="Логотип Device" width="145" height="36">
       </a>
       <section class="footer-info">
         <h2 class="visually-hidden">Контакты</h2>
